@@ -19,6 +19,7 @@ public class InputTest {
     $("#firstName").setValue("First name");
     $("#lastName").setValue("Last name");
     $("#userEmail").setValue("User email");
+
 }
 
 }
