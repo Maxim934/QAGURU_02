@@ -1,6 +1,6 @@
 package maxim.kim;
 
-public class PageObjects {
+public class TestData {
     String firstName = "Maxim";
     String secondName = "Kim";
     String email = "somemail@gmail.com";

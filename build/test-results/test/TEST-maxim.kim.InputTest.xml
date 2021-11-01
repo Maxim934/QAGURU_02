@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="maxim.kim.InputTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-26T13:23:19" hostname="DESKTOP-B2CL133" time="2.313">
+<testsuite name="maxim.kim.InputTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-01T06:45:31" hostname="DESKTOP-B2CL133" time="2.392">
   <properties/>
-  <testcase name="fillInputs()" classname="maxim.kim.InputTest" time="2.313"/>
-  <system-out><![CDATA[name Match
-email Match
-Gender Match
-MobilPhone Match
-Date of Birth Match
-Subjects Match
-Hobbies Match
-Picture Match
-Address Match
-State and City Match
-]]></system-out>
+  <testcase name="fillInputs()" classname="maxim.kim.InputTest" time="2.392"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 95.0.4638.17 (a9d0719444d4b035e284ed1fce73bf6ccd789df2-refs/branch-heads/4638@{#178}) on port 34353
+Starting ChromeDriver 95.0.4638.54 (d31a821ec901f68d0d34ccdbaea45b4c86ce543e-refs/branch-heads/4638@{#871}) on port 2710
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-окт 26, 2021 7:23:15 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+ноя 01, 2021 12:45:29 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

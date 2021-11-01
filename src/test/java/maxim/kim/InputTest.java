@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class InputTest {
     File img = new File("src/test/resources/img.png");
-    PageObjects po = new PageObjects();
+    TestData po = new TestData();
 
     @BeforeAll
     static void beforeAll() {
@@ -40,7 +40,7 @@ public class InputTest {
         //Выбор месяца декабрь
         $(".react-datepicker__month-select").selectOption("December");
         //Выбор даты
-        $(byXpath("//*[@aria-label = 'Choose Tuesday, December 1st, 1998']")).click();
+        $(".react-datepicker__day.react-datepicker__day--001").click();
         //Выбор урока
         $("#subjectsInput").click();
         $("#subjectsInput").sendKeys("M");
@@ -70,34 +70,23 @@ public class InputTest {
         $("#submit").click();
 
         //Verification
-        verification("Student Name", po.firstName + " " + po.secondName);
-        System.out.println("name Match");
-        verification("Student Email", po.email);
-        System.out.println("email Match");
-        verification("Gender", po.gender);
-        System.out.println("Gender Match");
-        verification("Mobile", po.mobilePhone);
-        System.out.println("MobilPhone Match");
-        verification("Date of Birth", po.dateOfBirth);
-        System.out.println("Date of Birth Match");
-        verification("Subjects", po.subject);
-        System.out.println("Subjects Match");
-        verification("Hobbies", po.hobbies);
-        System.out.println("Hobbies Match");
-        verification("Picture", po.picture);
-        System.out.println("Picture Match");
-        verification("Address", po.address);
-        System.out.println("Address Match");
-        verification("State and City", po.stateAndCity);
-        System.out.println("State and City Match");
-
+        checkTableRow("Student Name", po.firstName + " " + po.secondName);
+        checkTableRow("Student Email", po.email);
+        checkTableRow("Gender", po.gender);
+        checkTableRow("Mobile", po.mobilePhone);
+        checkTableRow("Date of Birth", po.dateOfBirth);
+        checkTableRow("Subjects", po.subject);
+        checkTableRow("Hobbies", po.hobbies);
+        checkTableRow("Picture", po.picture);
+        checkTableRow("Address", po.address);
+        checkTableRow("State and City", po.stateAndCity);
 
     }
 
     //verification method
-    private void verification(String label, String value) {
-        String string = MessageFormat.format("//td[contains(text(),\"{0}\")]/..//td[2] ", label);
-        $(byXpath(string)).should(Condition.exactText(value));
+    private void checkTableRow(String rowLabel, String expectedResult) {
+        String string = MessageFormat.format("//td[contains(text(),\"{0}\")]/..//td[2] ", rowLabel);
+        $(byXpath(string)).should(Condition.exactText(expectedResult));
     }
 
 
